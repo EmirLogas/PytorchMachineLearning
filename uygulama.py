@@ -57,7 +57,7 @@ model.load_state_dict(torch.load('model_weights3.pth'))
 model.eval()
 
 # Resimleri okumak için gerekli olan transform
-image = cv2.imread('asd.jpeg')
+image = cv2.imread('asd.jpeg') # resim okuma
 image = cv2.resize(image, (64, 64))
 image = ToTensor()(image)
 image = image.unsqueeze(0)
